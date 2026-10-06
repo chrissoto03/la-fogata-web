@@ -197,3 +197,113 @@ footer {
         display: flex;
     }
 }
+
+/*---------- Menu ---------*/
+
+.menu-tipo-titulo {
+    font-size: 1.6rem;
+    color: var(--color-principal);
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-tipo-titulo:first-child {
+    margin-top: 0;
+}
+
+.menu-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+.category-btn {
+    background: none;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.category-btn.active {
+    background-color: var(--color-principal);
+    color: white;
+}
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.2rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+}
+
+.menu-item-header h3 {
+    font-size: 1.1rem;
+    color: var(--color-oscuro);
+}
+
+.menu-item-price {
+    color: var(--color-principal);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: left;
+}
+
+.menu-accordion details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+.menu-accordion summary {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-oscuro);
+    cursor: pointer;
+    background-color: var(--color-claro);
+    list-style: none;
+}
+
+.menu-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-accordion summary::after {
+    content: "⌄";
+    float: right;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #999;
+    transition: transform 0.2s ease;
+}
+
+.menu-accordion details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.menu-accordion .menu-items {
+    padding: 1.5rem;
+}
