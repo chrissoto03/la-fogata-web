@@ -201,25 +201,28 @@ footer {
 /*---------- Menu ---------*/
 
 .menu-tipo-titulo {
-    font-size: 1.6rem;
-    color: var(--color-principal);
     text-align: center;
-    margin: 2rem 0 1rem 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    color: var(--color-oscuro);
+    margin: 0 0 2rem 0;
+    padding-bottom: 0.8rem;
 }
 
-.menu-tipo-titulo:first-child {
-    margin-top: 0;
+.menu-tipo-titulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-principal);
+    margin: 0.6rem auto 0 auto;
 }
 
-.menu-categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin-bottom: 2.5rem;
+.menu-tipo-titulo:not(:first-child) {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--color-oscuro);
 }
+
 .category-btn {
     background: none;
     border: 2px solid var(--color-principal);

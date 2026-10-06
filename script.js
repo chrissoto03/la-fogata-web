@@ -637,19 +637,7 @@ const menuData = [
 
 const menuAccordion = document.getElementById('menuAccordion');
 
-function agruparPorCategoria(items) {
-    const grupos = {};
-
-    items.forEach(function (item) {
-        if (!grupos[item.categoria]) {
-            grupos[item.categoria] = [];
-        }
-        grupos[item.categoria].push(item);
-    });
-
-    return grupos;
-}
-
+/// Agrupa los elementos por categoría - Tenemos como queremos que se almacenen
 function agruparPorCategoria(items) {
     const grupos = {};
     items.forEach(function (item) {
@@ -661,6 +649,7 @@ function agruparPorCategoria(items) {
     return grupos;
 }
 
+/// Crea un acordeón para cada categoría - Tenemos como queremos que se vea los platillos en el menú
 function crearAcordeonCategoria(categoria, platillos) {
     const details = document.createElement('details');
 
@@ -679,7 +668,7 @@ function crearAcordeonCategoria(categoria, platillos) {
                 <h3>${item.nombre}</h3>
                 <span class="menu-item-price">₡${item.precio.toLocaleString()}</span>
             </div>
-            <p>${item.descripcion}</p>
+            <p>${item.descripcion ? item.descripcion : ''}</p>
         `;
         grid.appendChild(card);
     });
@@ -687,7 +676,7 @@ function crearAcordeonCategoria(categoria, platillos) {
     details.appendChild(grid);
     return details;
 }
-
+/// Renderiza el menú en el HTML - Tenemos como queremos que se vea el menú en la página
 function renderMenu(items) {
     menuAccordion.innerHTML = '';
 
