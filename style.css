@@ -114,9 +114,10 @@ footer {
     padding: 1.5rem;
 }
 
+
 .hero {
     max-width: none;
-    margin: 0;
+    margin: 0 auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url('images/hero-bg.jpg');
     background-size: cover;
@@ -144,13 +145,14 @@ footer {
 
 /*---------- Menu ---------*/
 
-.menu-main-title { 
+.menu-main-title {
     text-align: left;
     color: var(--color-oscuro);
     font-family: var(--font-titulos);
     font-size: 2.3rem;
     margin-bottom: 0.5rem;
 }
+
 .menu-chevron {
     width: 100%;
     height: 55px;
@@ -292,6 +294,19 @@ body {
 
 /* ----- SOBRE NOSOTROS -----*/
 
+#nosotros {
+    max-width: none;
+    padding: 0;
+}
+
+.about-block-light {
+    background-color: #ffffff;
+}
+
+.about-block-gray {
+    background-color: #f7f5f5;
+}
+
 .about-row {
     display: flex;
     align-items: center;
@@ -332,6 +347,18 @@ body {
 }
 
 /* ----- CONTACTO ----- */
+
+#contacto {
+    max-width: none;
+    padding: 0;
+    background-color: var(--color-claro);
+}
+
+.contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
 
 .contact-row {
     display: flex;
