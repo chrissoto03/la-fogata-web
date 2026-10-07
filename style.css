@@ -119,7 +119,7 @@ footer {
     max-width: none;
     margin: 0 auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url('images/hero-bg.jpg');
+        url('images/hero-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
