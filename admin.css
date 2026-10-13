@@ -1,0 +1,206 @@
+/* ===== PANEL DE ADMINISTRACIÓN ===== */
+[hidden] {
+    display: none !important;
+}
+
+.admin-body {
+    background-color: #f4f1ec;
+    min-height: 100vh;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-oscuro);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.admin-header h1 {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+}
+
+.admin-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.admin-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.admin-card h2 {
+    font-family: var(--font-titulos);
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.ayuda {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Formularios */
+.admin-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.admin-card form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}
+
+.admin-card form input,
+.admin-card form textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.admin-card form .btn {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+}
+
+/* Mensajes */
+.mensaje {
+    min-height: 1.3rem;
+    font-size: 0.9rem;
+}
+
+.ok {
+    color: #2e7d32;
+}
+
+.error {
+    color: #c0392b;
+}
+
+/* Horario */
+.horario-fila {
+    display: grid;
+    grid-template-columns: 100px auto 1fr 1fr auto;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.check-cerrado {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.horario-fila input[type="time"] {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.horario-fila input[type="time"]:disabled {
+    background-color: #eee;
+}
+
+.horario-fila .estado {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+}
+
+.estado:empty {
+    display: none;
+}
+
+/* Botones */
+.btn-guardar {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-guardar:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.btn-secundario {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-borrar {
+    background: none;
+    border: 1px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-borrar:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+/* Lista de promos */
+.promo-admin-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.promo-admin-fila small {
+    display: block;
+    color: #777;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.1rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.vigente { background-color: #2e7d32; }
+.badge.programada { background-color: #1565c0; }
+.badge.vencida { background-color: #757575; }
+
+@media (max-width: 700px) {
+    .horario-fila {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .admin-header {
+        padding: 1rem;
+    }
+}

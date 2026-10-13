@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Administración | La Fogata</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+    <header class="admin-header">
+        <h1>La Fogata · Administración</h1>
+        <button id="logoutBtn" class="btn-secundario" hidden>Cerrar sesión</button>
+    </header>
+
+    <main class="admin-main">
+
+        <div id="loginSection" class="admin-card">
+            <h2>Iniciar sesión</h2>
+            <form id="loginForm">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" autocomplete="username" required>
+
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" autocomplete="current-password" required>
+
+                <button type="submit" class="btn">Entrar</button>
+                <p id="loginMensaje" class="mensaje" role="alert"></p>
+            </form>
+        </div>
+
+        <div id="panelSection" hidden>
+
+            <div class="admin-card">
+                <h2>Horario</h2>
+                <p class="ayuda">Cada día se guarda por separado con su botón.</p>
+                <div id="horarioAdmin"></div>
+            </div>
+
+            <div class="admin-card">
+                <h2>Nueva promo</h2>
+                <form id="promoForm">
+                    <label for="promoTitulo">Título</label>
+                    <input type="text" id="promoTitulo" maxlength="100" required>
+
+                    <label for="promoDescripcion">Descripción (opcional)</label>
+                    <textarea id="promoDescripcion" maxlength="500" rows="3"></textarea>
+
+                    <label for="promoImagen">URL de la imagen (opcional, debe empezar con https://)</label>
+                    <input type="url" id="promoImagen" maxlength="500"
+                           pattern="https://.*" title="Debe empezar con https://">
+
+                    <label for="promoInicio">Válida desde</label>
+                    <input type="date" id="promoInicio" required>
+
+                    <label for="promoFin">Válida hasta</label>
+                    <input type="date" id="promoFin" required>
+
+                    <button type="submit" class="btn">Crear promo</button>
+                    <p id="promoMensaje" class="mensaje" role="status"></p>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h2>Todas las promos</h2>
+                <div id="promosAdmin"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
