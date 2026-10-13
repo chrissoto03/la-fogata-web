@@ -111,11 +111,8 @@
                         <p>✉️ <a href="mailto:lafogatacr@gmail.com">lafogatacr@gmail.com</a></p>
 
                         <h4>Horario</h4>
-                        <ul class="horario-list">
-                            <li><span>Lunes</span><span>Cerrado</span></li>
-                            <li><span>Martes - Jueves</span><span>12:00 PM - 10:00 PM</span></li>
-                            <li><span>Viernes - Sábado</span><span>11:00 AM - 11:00 PM</span></li>
-                            <li><span>Domingo</span><span>11:00 AM - 10:00 PM</span></li>
+                        <ul class="horario-list" id="horarioList">
+                            <li><span>Cargando horario...</span></li>
                         </ul>
 
                         <a href="https://www.facebook.com/profile.php?id=61570508908683" target="_blank"
@@ -130,13 +127,19 @@
                 </div>
             </div>
         </section>
+        <section id="promos" hidden>
+            <h2>Promociones</h2>
+            <div class="promos-grid" id="promosGrid"></div>
+        </section>
 
     </main>
 
     <footer>
         <p>&copy; 2026 La Fogata Bar & Grill</p>
     </footer>
+    <script src="config.js"></script>
     <script src="script.js"></script>
+    <script src="api.js"></script>
 </body>
 
 </html>
